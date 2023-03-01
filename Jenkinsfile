@@ -15,7 +15,7 @@ pipeline{
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t anandebix/devops-integration-4 .'
+                    sh 'docker build -t anandebix/devops-integration-5 .'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerpwd')]) {
                       sh 'docker login -u anandebix -p ${dockerpwd}'
                     }
-                    sh 'docker push anandebix/devops-integration-4' 
+                    sh 'docker push anandebix/devops-integration-5' 
                 }
             }
         }
