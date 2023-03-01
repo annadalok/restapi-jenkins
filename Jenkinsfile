@@ -11,10 +11,18 @@ pipeline {
                 sh 'mvn clean compile -DskipTests'
             }
         }
+<<<<<<< HEAD
         stage('deploy') { 
             
             steps {
                 sh 'mvn package -DskipTests'
+=======
+        stage('Build docker image'){
+            steps{
+                script{
+                    sh 'docker build -t anandebix/devops-integration-5 .'
+                }
+>>>>>>> refs/remotes/origin/main
             }
         }
         stage('Build Docker image'){
@@ -30,6 +38,11 @@ pipeline {
             steps {
                  withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerpwd')]) {
                       sh 'docker login -u anandebix -p ${dockerpwd}'
+<<<<<<< HEAD
+=======
+                    }
+                    sh 'docker push anandebix/devops-integration-5' 
+>>>>>>> refs/remotes/origin/main
                 }
             }                
         }
