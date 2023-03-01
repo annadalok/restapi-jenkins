@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ebix.api</groupId>
-	<artifactId>restapi-jenkins</artifactId>
+	<artifactId>restapi-jenkins2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>restapi-jenkins</name>
 	<description>Regadmin server</description>
@@ -65,7 +65,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>restapi-jenkins</finalName>
+		<finalName>restapi-jenkins2</finalName>
 	</build>
 
 </project>
